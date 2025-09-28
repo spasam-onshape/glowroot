@@ -1,0 +1,73 @@
+{
+  "name": "Memcached Plugin",
+  "id": "memcached",
+  "instrumentation": [
+    {
+      "className": "net.spy.memcached.MemcachedClient",
+      "methodName": "get",
+      "methodParameterTypes": [
+        "*"
+      ],
+      "nestingGroup": "memcached",
+      "captureKind": "trace-entry",
+      "timerName": "memcached get",
+      "traceEntryMessageTemplate": "memcached get {{0}}"
+    },
+    {
+      "className": "net.spy.memcached.MemcachedClient",
+      "methodName": "set",
+      "methodParameterTypes": [
+        "*",
+        ".."
+      ],
+      "nestingGroup": "memcached",
+      "captureKind": "trace-entry",
+      "timerName": "memcached set",
+      "traceEntryMessageTemplate": "memcached set {{0}}"
+    },
+    {
+      "className": "net.spy.memcached.MemcachedClient",
+      "methodName": "delete",
+      "methodParameterTypes": [
+        "*"
+      ],
+      "nestingGroup": "memcached",
+      "captureKind": "trace-entry",
+      "timerName": "memcached delete",
+      "traceEntryMessageTemplate": "memcached delete {{0}}"
+    },
+    {
+      "className": "net.spy.memcached.MemcachedClient",
+      "methodName": "getBulk",
+      "methodParameterTypes": [
+        "*"
+      ],
+      "nestingGroup": "memcached",
+      "captureKind": "trace-entry",
+      "timerName": "memcached getBulk",
+      "traceEntryMessageTemplate": "memcached getBulk"
+    },
+    {
+      "className": "net.spy.memcached.MemcachedClient",
+      "methodName": "asyncGet",
+      "methodParameterTypes": [
+        "*"
+      ],
+      "nestingGroup": "memcached",
+      "captureKind": "trace-entry",
+      "timerName": "memcached asyncGet",
+      "traceEntryMessageTemplate": "memcached asyncGet {{0}}"
+    },
+    {
+      "className": "net.spy.memcached.MemcachedClient",
+      "methodName": "asyncGetBulk",
+      "methodParameterTypes": [
+        "*"
+      ],
+      "nestingGroup": "memcached",
+      "captureKind": "trace-entry",
+      "timerName": "memcached asyncGetBulk",
+      "traceEntryMessageTemplate": "memcached asyncGetBulk"
+    }
+  ]
+}

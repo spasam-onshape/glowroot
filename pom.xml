@@ -70,6 +70,7 @@
     <module>agent/plugins/kafka-plugin</module>
     <module>agent/plugins/logger-plugin</module>
     <module>agent/plugins/mail-plugin</module>
+    <module>agent/plugins/memcached-plugin</module>
     <module>agent/plugins/mongodb-plugin</module>
     <module>agent/plugins/netty-plugin</module>
     <module>agent/plugins/play-plugin</module>
@@ -78,6 +79,7 @@
     <module>agent/plugins/servlet-plugin</module>
     <module>agent/plugins/spring-plugin</module>
     <module>agent/plugins/struts-plugin</module>
+    <module>agent/plugins/zookeeper-plugin</module>
     <module>agent/benchmarks</module>
     <module>agent/ui-sandbox</module>
     <module>agent/dist-maven-plugin</module>

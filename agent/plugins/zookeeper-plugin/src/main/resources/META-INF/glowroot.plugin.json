@@ -1,0 +1,78 @@
+{
+  "name": "ZooKeeper Plugin",
+  "id": "zookeeper",
+  "instrumentation": [
+    {
+      "className": "org.apache.zookeeper.ZooKeeper",
+      "methodName": "create",
+      "methodParameterTypes": [
+        "*",
+        ".."
+      ],
+      "nestingGroup": "zookeeper",
+      "captureKind": "trace-entry",
+      "timerName": "zookeeper create",
+      "traceEntryMessageTemplate": "zookeeper create {{0}}"
+    },
+    {
+      "className": "org.apache.zookeeper.ZooKeeper",
+      "methodName": "delete",
+      "methodParameterTypes": [
+        "*",
+        ".."
+      ],
+      "nestingGroup": "zookeeper",
+      "captureKind": "trace-entry",
+      "timerName": "zookeeper delete",
+      "traceEntryMessageTemplate": "zookeeper delete {{0}}"
+    },
+    {
+      "className": "org.apache.zookeeper.ZooKeeper",
+      "methodName": "exists",
+      "methodParameterTypes": [
+        "*",
+        ".."
+      ],
+      "nestingGroup": "zookeeper",
+      "captureKind": "trace-entry",
+      "timerName": "zookeeper exists",
+      "traceEntryMessageTemplate": "zookeeper exists {{0}}"
+    },
+    {
+      "className": "org.apache.zookeeper.ZooKeeper",
+      "methodName": "getChildren",
+      "methodParameterTypes": [
+        "*",
+        ".."
+      ],
+      "nestingGroup": "zookeeper",
+      "captureKind": "trace-entry",
+      "timerName": "zookeeper getChildren",
+      "traceEntryMessageTemplate": "zookeeper getChildren {{0}}"
+    },
+    {
+      "className": "org.apache.zookeeper.ZooKeeper",
+      "methodName": "getData",
+      "methodParameterTypes": [
+        "*",
+        ".."
+      ],
+      "nestingGroup": "zookeeper",
+      "captureKind": "trace-entry",
+      "timerName": "zookeeper getData",
+      "traceEntryMessageTemplate": "zookeeper getData {{0}}"
+    },
+    {
+      "className": "org.apache.zookeeper.ZooKeeper",
+      "methodName": "setData",
+      "methodParameterTypes": [
+        "*",
+        ".."
+      ],
+      "nestingGroup": "zookeeper",
+      "captureKind": "trace-entry",
+      "timerName": "zookeeper setData",
+      "traceEntryMessageTemplate": "zookeeper setData {{0}}"
+    }
+  ]
+}

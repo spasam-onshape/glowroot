@@ -154,6 +154,11 @@
     </dependency>
     <dependency>
       <groupId>org.glowroot</groupId>
+      <artifactId>glowroot-agent-memcached-plugin</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.glowroot</groupId>
       <artifactId>glowroot-agent-mongodb-plugin</artifactId>
       <version>${project.version}</version>
     </dependency>
@@ -190,6 +195,11 @@
     <dependency>
       <groupId>org.glowroot</groupId>
       <artifactId>glowroot-agent-struts-plugin</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.glowroot</groupId>
+      <artifactId>glowroot-agent-zookeeper-plugin</artifactId>
       <version>${project.version}</version>
     </dependency>
   </dependencies>
