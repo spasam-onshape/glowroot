@@ -1,0 +1,31 @@
+{
+  "name": "Spring AMQP Plugin",
+  "id": "spring-amqp",
+  "instrumentation": [
+    {
+      "className": "org.springframework.amqp.rabbit.core.RabbitTemplate",
+      "methodName": "convertAndSend",
+      "methodParameterTypes": [
+        "java.lang.String",
+        "java.lang.String",
+        ".."
+      ],
+      "nestingGroup": "spring-amqp",
+      "captureKind": "trace-entry",
+      "timerName": "amqp send",
+      "traceEntryMessageTemplate": "amqp send {{1}}"
+    },
+    {
+      "className": "org.springframework.amqp.rabbit.core.RabbitTemplate",
+      "methodName": "onMessage",
+      "methodParameterTypes": [
+        "org.springframework.amqp.core.Message",
+        ".."
+      ],
+      "nestingGroup": "spring-amqp",
+      "captureKind": "trace-entry",
+      "timerName": "amqp receive",
+      "traceEntryMessageTemplate": "amqp receive {{0.messageProperties.receivedRoutingKey}}"
+    }
+  ]
+}
