@@ -211,7 +211,9 @@ public class ResourceMethodMeta {
     }
 
     private static String replacePathSegmentsWithAsterisk(String path) {
-        return path.replaceAll("/\\{.*?/", "/*/");
+        // Replace "/abc/{just:[a-z]{24}}/" with "/abc/*/"
+        // Also replace "/def/{just:[a-z]}" with "/def/*"
+        return path.replaceAll("/\\{.*?/", "/*/").replaceAll("/\\{.*?$", "/*");
     }
 
     private static String getSimpleName(String className) {
